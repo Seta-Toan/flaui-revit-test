@@ -44,7 +44,7 @@ public static class TestConfig
 
     public static TimeSpan DefaultTimeout => TimeSpan.FromSeconds(30); 
     public static TimeSpan PollInterval => TimeSpan.FromMilliseconds(200); 
-    public static TimeSpan DialogTimeout => TimeSpan.FromSeconds(15);
+    public static TimeSpan DialogTimeout => TimeSpan.FromSeconds(8);
     public static string RevitPath => GetRevitPath();
     public static string RevitArguments => GetRevitArguments();
     

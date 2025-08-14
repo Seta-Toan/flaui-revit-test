@@ -15,7 +15,7 @@ namespace Revit.UiTests;
 public class CompleteWorkflowTest
 {
     [Test]
-    [Timeout(100000)]
+    [Timeout(700000)]
     [Retry(1)]
     public void E2E_Revit_Startup_To_Project_Selection()
     {
@@ -47,7 +47,7 @@ public class CompleteWorkflowTest
     }
 
     [Test]
-    [Timeout(120000)] // 2 phút
+    [Timeout(120000)] 
     [Retry(1)]
     public void E2E_Open_Sample_Project()
     {

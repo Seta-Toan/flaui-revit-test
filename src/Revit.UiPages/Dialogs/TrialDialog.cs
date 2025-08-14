@@ -112,8 +112,8 @@ public class TrialDialog
         try
         {
             // CHỜ WEBVIEW2 RENDER - WebView2 cần thời gian load HTML/CSS
-            TestContext.Progress.WriteLine("⏳ Chờ 5 giây để WebView2 trial dialog render hoàn toàn...");
-            System.Threading.Thread.Sleep(5000); 
+            TestContext.Progress.WriteLine("⏳ Chờ 2 giây để WebView2 trial dialog render...");
+            System.Threading.Thread.Sleep(2000); 
             TestContext.Progress.WriteLine("✅ Hoàn tất chờ WebView2 render");
             
             // Thử tìm button với retry logic
@@ -129,8 +129,8 @@ public class TrialDialog
                 
                 if (closeButton == null && attempts < maxAttempts)
                 {
-                    TestContext.Progress.WriteLine("⏳ Chờ thêm 5 giây để WebView2 load...");
-                    System.Threading.Thread.Sleep(5000);
+                    TestContext.Progress.WriteLine("⏳ Chờ thêm 2 giây để WebView2 load...");
+                    System.Threading.Thread.Sleep(2000);
                 }
             }
             
