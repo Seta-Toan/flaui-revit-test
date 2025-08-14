@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "o4wPazowgVc=",
+  "dgSpecHash": "Fp5fotoDckc=",
   "success": true,
   "projectFilePath": "D:\\Revit\\RevitTests\\FlaUITestWithClassLibraryNETStandard\\src\\Revit.Automation\\Revit.Automation.csproj",
   "expectedPackageFiles": [
@@ -10,12 +10,14 @@
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\9.0.8\\microsoft.bcl.asyncinterfaces.9.0.8.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.8\\microsoft.extensions.configuration.9.0.8.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.8\\microsoft.extensions.configuration.abstractions.9.0.8.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration.environmentvariables\\9.0.8\\microsoft.extensions.configuration.environmentvariables.9.0.8.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\9.0.8\\microsoft.extensions.configuration.fileextensions.9.0.8.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration.json\\9.0.8\\microsoft.extensions.configuration.json.9.0.8.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\9.0.8\\microsoft.extensions.fileproviders.abstractions.9.0.8.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\9.0.8\\microsoft.extensions.fileproviders.physical.9.0.8.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\9.0.8\\microsoft.extensions.filesystemglobbing.9.0.8.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.8\\microsoft.extensions.primitives.9.0.8.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\nunit\\3.14.0\\nunit.3.14.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.codedom\\8.0.0\\system.codedom.8.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.io.pipelines\\9.0.8\\system.io.pipelines.9.0.8.nupkg.sha512",

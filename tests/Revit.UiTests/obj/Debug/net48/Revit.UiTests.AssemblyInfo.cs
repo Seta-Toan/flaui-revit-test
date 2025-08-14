@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Revit.UiTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3246c66689227f61a8c3ccdfcd627c9696f57358")]
 [assembly: System.Reflection.AssemblyProductAttribute("Revit.UiTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Revit.UiTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

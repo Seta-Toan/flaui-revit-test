@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>Test Unsigned Add-in</Name>
+    <Assembly>TestUnsignedAddin.dll</Assembly>
+    <FullClassName>TestUnsignedAddin.TestApplication</FullClassName>
+    <ClientId>b9707c1a-5fdc-4a84-a7c1-f3b2e2f3d123</ClientId>
+    <VendorId>TEST</VendorId>
+    <VendorDescription>Test Vendor for Security Dialog</VendorDescription>
+  </AddIn>
+</RevitAddIns>

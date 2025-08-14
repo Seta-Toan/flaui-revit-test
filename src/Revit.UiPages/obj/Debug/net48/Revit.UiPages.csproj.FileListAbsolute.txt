@@ -6,6 +6,7 @@ D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\bin\D
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\bin\Debug\net48\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\bin\Debug\net48\Microsoft.Extensions.Configuration.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\bin\Debug\net48\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\bin\Debug\net48\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\bin\Debug\net48\Microsoft.Extensions.Configuration.FileExtensions.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\bin\Debug\net48\Microsoft.Extensions.Configuration.Json.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\bin\Debug\net48\Microsoft.Extensions.FileProviders.Abstractions.dll
@@ -29,6 +30,8 @@ D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\obj\D
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\obj\Debug\net48\Revit.UiPages.AssemblyInfoInputs.cache
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\obj\Debug\net48\Revit.UiPages.AssemblyInfo.cs
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\obj\Debug\net48\Revit.UiPages.csproj.CoreCompileInputs.cache
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\obj\Debug\net48\Revit.UiPages.sourcelink.json
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\obj\Debug\net48\Revit.Ui.4CFA0D4F.Up2Date
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\obj\Debug\net48\Revit.UiPages.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\obj\Debug\net48\Revit.UiPages.pdb
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\bin\Debug\net48\nunit.framework.dll

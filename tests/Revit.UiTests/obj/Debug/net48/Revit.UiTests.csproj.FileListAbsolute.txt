@@ -1,11 +1,4 @@
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\.msCoverageSourceRootsMapping_Revit.UiTests
-D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\obj\Debug\net48\Revit.UiTests.csproj.AssemblyReference.cache
-D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\obj\Debug\net48\Revit.UiTests.csproj.SuggestedBindingRedirects.cache
-D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\obj\Debug\net48\Revit.UiTests.dll.config
-D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\obj\Debug\net48\Revit.UiTests.GeneratedMSBuildEditorConfig.editorconfig
-D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\obj\Debug\net48\Revit.UiTests.AssemblyInfoInputs.cache
-D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\obj\Debug\net48\Revit.UiTests.AssemblyInfo.cs
-D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\obj\Debug\net48\Revit.UiTests.csproj.CoreCompileInputs.cache
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\NUnit3.TestAdapter.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\NUnit3.TestAdapter.pdb
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\nunit.engine.dll
@@ -13,6 +6,9 @@ D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\nunit.engine.core.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\testcentric.engine.metadata.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\appsettings.Test.json
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\Revit.UiTests.dll.config
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\Revit.UiTests.dll
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\Revit.UiTests.pdb
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\FlaUI.Core.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\FlaUI.UIA3.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\Interop.UIAutomationClient.dll
@@ -20,6 +16,7 @@ D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\Microsoft.Extensions.Configuration.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\Microsoft.Extensions.Configuration.FileExtensions.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\Microsoft.Extensions.Configuration.Json.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\Microsoft.Extensions.FileProviders.Abstractions.dll
@@ -41,9 +38,14 @@ D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\Revit.UiPages.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\Revit.Automation.pdb
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\Revit.UiPages.pdb
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\obj\Debug\net48\Revit.UiTests.csproj.AssemblyReference.cache
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\obj\Debug\net48\Revit.UiTests.csproj.SuggestedBindingRedirects.cache
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\obj\Debug\net48\Revit.UiTests.dll.config
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\obj\Debug\net48\Revit.UiTests.GeneratedMSBuildEditorConfig.editorconfig
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\obj\Debug\net48\Revit.UiTests.AssemblyInfoInputs.cache
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\obj\Debug\net48\Revit.UiTests.AssemblyInfo.cs
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\obj\Debug\net48\Revit.UiTests.csproj.CoreCompileInputs.cache
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\obj\Debug\net48\Revit.UiTests.sourcelink.json
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\obj\Debug\net48\Revit.Ui.19473C6C.Up2Date
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\obj\Debug\net48\Revit.UiTests.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\obj\Debug\net48\Revit.UiTests.pdb
-D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\Revit.UiTests.dll.config
-D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\Revit.UiTests.dll
-D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\Revit.UiTests.pdb

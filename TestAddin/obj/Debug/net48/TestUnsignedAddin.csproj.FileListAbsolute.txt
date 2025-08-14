@@ -1,0 +1,10 @@
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\TestAddin\bin\Debug\net48\TestUnsignedAddin.dll
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\TestAddin\bin\Debug\net48\TestUnsignedAddin.pdb
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\TestAddin\obj\Debug\net48\TestUnsignedAddin.csproj.AssemblyReference.cache
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\TestAddin\obj\Debug\net48\TestUnsignedAddin.GeneratedMSBuildEditorConfig.editorconfig
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\TestAddin\obj\Debug\net48\TestUnsignedAddin.AssemblyInfoInputs.cache
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\TestAddin\obj\Debug\net48\TestUnsignedAddin.AssemblyInfo.cs
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\TestAddin\obj\Debug\net48\TestUnsignedAddin.csproj.CoreCompileInputs.cache
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\TestAddin\obj\Debug\net48\TestUnsignedAddin.sourcelink.json
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\TestAddin\obj\Debug\net48\TestUnsignedAddin.dll
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\TestAddin\obj\Debug\net48\TestUnsignedAddin.pdb

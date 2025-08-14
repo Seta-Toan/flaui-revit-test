@@ -1,6 +1,9 @@
+using System;
+using System.Threading;
+
 namespace Revit.Automation.Waits;
 
-public static class UiWait
+public static class UiWaits
 {
     public static bool Until(Func<bool> cond, TimeSpan? timeout = null, TimeSpan? poll = null)
     {
@@ -10,11 +13,28 @@ public static class UiWait
 
         while (DateTime.UtcNow < end)
         {
-            try { if (cond()) return true; last = null; }
-            catch (Exception ex) { last = ex; }
+            try
+            {
+                last = null; // reset mỗi lần cond() chạy ok
+                if (cond()) return true;
+            }
+            catch (Exception ex)
+            {
+                last = ex; // ghi nhận rồi tiếp tục polling
+            }
             Thread.Sleep(delay);
         }
-        if (last != null) throw last;
+
+        if (last != null)
+            throw new TimeoutException("Wait timed out", last);
+
         return false;
+    }
+
+    public static T? UntilNotNull<T>(Func<T?> cond, TimeSpan? timeout = null, TimeSpan? poll = null) where T : class
+    {
+        T? result = null;
+        var ok = Until(() => (result = cond()) != null, timeout, poll);
+        return ok ? result : null;
     }
 }

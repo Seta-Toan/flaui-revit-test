@@ -1,29 +1,63 @@
+using System;
+using System.IO;
 using Microsoft.Extensions.Configuration;
 
 namespace Revit.Automation.Config;
 
 public static class TestConfig
 {
-    private static IConfigurationRoot? _cfg;
+    private static readonly IConfigurationRoot Cfg;
+
     static TestConfig()
     {
-        var builder = new ConfigurationBuilder()
-            .AddJsonFile("appsettings.Test.json", optional: true)
-            .AddEnvironmentVariables();
-        _cfg = builder.Build();
+        Cfg = new ConfigurationBuilder()
+            .AddJsonFile("appsettings.Test.json", optional: true, reloadOnChange: false)
+            .AddEnvironmentVariables()
+            .Build();
     }
 
-    public static string RevitExe =>
-        Environment.GetEnvironmentVariable("REVIT_EXE")
-        ?? _cfg?["Revit:ExePath"]?.Replace("%REVIT_EXE%", string.Empty) 
-        ?? @"C:\Program Files\Autodesk\Revit 2026\Revit.exe";
+    public static string RevitExe
+    {
+        get
+        {
+            var envVar = Environment.GetEnvironmentVariable("REVIT_EXE");
+            var configPath = Cfg["Revit:ExePath"];
+            var defaultPath = @"D:\Revit\Autodesk\Revit 2026\Revit.exe";
+
+            var chosen = !string.IsNullOrWhiteSpace(envVar) ? envVar
+                       : (!string.IsNullOrWhiteSpace(configPath) && configPath != "%REVIT_EXE%") ? configPath
+                       : defaultPath;
+
+            if (!File.Exists(chosen))
+            {
+                throw new FileNotFoundException(
+                    $"Revit.exe không tồn tại tại đường dẫn: '{chosen}'. " +
+                    "Vui lòng đặt biến môi trường REVIT_EXE hoặc cấu hình Revit:ExePath trong appsettings.Test.json.");
+            }
+
+            return chosen;
+        }
+    }
 
     public static TimeSpan StartTimeout =>
-        TimeSpan.FromSeconds(int.TryParse(_cfg?["Revit:StartTimeoutSec"], out var s) ? s : 60);
+        TimeSpan.FromSeconds(int.TryParse(Cfg["Revit:StartTimeoutSec"], out var s) ? s : 60);
 
-    public static TimeSpan DefaultTimeout =>
-        TimeSpan.FromSeconds(int.TryParse(_cfg?["Revit:DefaultTimeoutSec"], out var s) ? s : 20);
+    public static TimeSpan DefaultTimeout => TimeSpan.FromSeconds(30); 
+    public static TimeSpan PollInterval => TimeSpan.FromMilliseconds(200); 
+    public static TimeSpan DialogTimeout => TimeSpan.FromSeconds(15);
+    public static string RevitPath => GetRevitPath();
+    public static string RevitArguments => GetRevitArguments();
+    
+    private static string GetRevitPath()
+    {
+        return @"D:\Revit\Autodesk\Revit 2026\Revit.exe";
+    }
+    
+    private static string GetRevitArguments()
+    {
+        return "/language ENU /nosplash";
+    }
 
-    public static TimeSpan PollInterval =>
-        TimeSpan.FromMilliseconds(int.TryParse(_cfg?["Revit:UiPollMs"], out var ms) ? ms : 200);
+    public static bool CiMode =>
+        bool.TryParse(Cfg["CiMode"], out var b) && b;
 }
