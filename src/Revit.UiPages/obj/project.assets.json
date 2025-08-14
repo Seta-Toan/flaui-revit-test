@@ -262,15 +262,25 @@
           "buildTransitive/net462/_._": {}
         }
       },
-      "NUnit/3.14.0": {
+      "NUnit/4.4.0": {
         "type": "package",
+        "dependencies": {
+          "System.Threading.Tasks.Extensions": "4.5.4",
+          "System.ValueTuple": "4.5.0"
+        },
         "compile": {
-          "lib/net45/nunit.framework.dll": {
+          "lib/net462/nunit.framework.dll": {
+            "related": ".legacy.xml;.xml"
+          },
+          "lib/net462/nunit.framework.legacy.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net45/nunit.framework.dll": {
+          "lib/net462/nunit.framework.dll": {
+            "related": ".legacy.xml;.xml"
+          },
+          "lib/net462/nunit.framework.legacy.dll": {
             "related": ".xml"
           }
         },
@@ -490,7 +500,7 @@
           "Microsoft.Extensions.Configuration": "9.0.8",
           "Microsoft.Extensions.Configuration.EnvironmentVariables": "9.0.8",
           "Microsoft.Extensions.Configuration.Json": "9.0.8",
-          "NUnit": "3.14.0"
+          "NUnit": "4.4.0"
         },
         "compile": {
           "bin/placeholder/Revit.Automation.dll": {}
@@ -842,28 +852,32 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "NUnit/3.14.0": {
-      "sha512": "R7iPwD7kbOaP3o2zldWJbWeMQAvDKD0uld27QvA3PAALl1unl7x0v2J7eGiJOYjimV/BuGT4VJmr45RjS7z4LA==",
+    "NUnit/4.4.0": {
+      "sha512": "7IWJcT9xWNhG9dEGdgAWdH6maCE0eVbeVnizvXACKbAyxbjoJ9+WaEb8qsCTJi3hsb18AJBtoqvWa3G7YYUQfw==",
       "type": "package",
-      "path": "nunit/3.14.0",
+      "path": "nunit/4.4.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "CHANGES.md",
         "LICENSE.txt",
-        "NOTICES.txt",
+        "NOTICES.md",
         "README.md",
+        "THIRD_PARTY_NOTICES.md",
         "build/NUnit.props",
         "icon.png",
-        "lib/net35/nunit.framework.dll",
-        "lib/net35/nunit.framework.xml",
-        "lib/net40/nunit.framework.dll",
-        "lib/net40/nunit.framework.xml",
-        "lib/net45/nunit.framework.dll",
-        "lib/net45/nunit.framework.xml",
-        "lib/netstandard2.0/nunit.framework.dll",
-        "lib/netstandard2.0/nunit.framework.xml",
-        "nunit.3.14.0.nupkg.sha512",
+        "lib/net462/nunit.framework.dll",
+        "lib/net462/nunit.framework.legacy.dll",
+        "lib/net462/nunit.framework.legacy.xml",
+        "lib/net462/nunit.framework.xml",
+        "lib/net6.0/nunit.framework.dll",
+        "lib/net6.0/nunit.framework.legacy.dll",
+        "lib/net6.0/nunit.framework.legacy.xml",
+        "lib/net6.0/nunit.framework.xml",
+        "lib/net8.0/nunit.framework.dll",
+        "lib/net8.0/nunit.framework.legacy.dll",
+        "lib/net8.0/nunit.framework.legacy.xml",
+        "lib/net8.0/nunit.framework.xml",
+        "nunit.4.4.0.nupkg.sha512",
         "nunit.nuspec"
       ]
     },

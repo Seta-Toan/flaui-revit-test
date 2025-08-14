@@ -6,12 +6,12 @@ using FlaUI.Core;
 using FlaUI.Core.AutomationElements;
 using FlaUI.Core.Definitions; 
 using FlaUI.UIA3;
-using Revit.Automation.Config;
-using Revit.Automation.Waits;
-using Revit.Automation.Dialogs;
+using Revit.Automation.Core.Config;
+using Revit.Automation.Core.Utils;
+
 using NUnit.Framework;
 
-namespace Revit.Automation.Drivers;
+namespace Revit.Automation.Core.Drivers;
 
 public sealed class RevitProcess : IDisposable
 {
@@ -37,8 +37,8 @@ public sealed class RevitProcess : IDisposable
                 TestContext.Progress.WriteLine("🆕 RevitProcess: Khởi động Revit mới...");
                 App = Application.Launch(TestConfig.RevitExe);
                 
-                TestContext.Progress.WriteLine("⏳ RevitProcess: Chờ 22 giây để Revit khởi động hoàn toàn...");
-                System.Threading.Thread.Sleep(22000); 
+                TestContext.Progress.WriteLine("⏳ RevitProcess: Chờ 30 giây để Revit khởi động hoàn toàn...");
+                System.Threading.Thread.Sleep(30000); 
                 TestContext.Progress.WriteLine("✅ RevitProcess: Hoàn tất chờ khởi động");
             }
 

@@ -35,3 +35,4 @@ D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\obj\D
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\obj\Debug\net48\Revit.UiPages.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\obj\Debug\net48\Revit.UiPages.pdb
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\bin\Debug\net48\nunit.framework.dll
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\bin\Debug\net48\nunit.framework.legacy.dll

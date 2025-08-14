@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using Microsoft.Extensions.Configuration;
 
-namespace Revit.Automation.Config;
+namespace Revit.Automation.Core.Config;
 
 public static class TestConfig
 {

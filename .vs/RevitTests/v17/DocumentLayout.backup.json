@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{D3EB9A9F-DC0A-4EFE-9DA3-65F469A8B286}|tests\\Revit.UiTests\\Revit.UiTests.csproj|solutionrelative:tests\\revit.uitests\\revit.uitests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14A730EA-D0E5-4A2D-AACB-273BEDC3F4CD}|src\\Revit.Automation\\Revit.Automation.csproj|d:\\revit\\revittests\\flauitestwithclasslibrarynetstandard\\src\\revit.automation\\dialogs\\trialdialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14A730EA-D0E5-4A2D-AACB-273BEDC3F4CD}|src\\Revit.Automation\\Revit.Automation.csproj|solutionrelative:src\\revit.automation\\dialogs\\trialdialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{14A730EA-D0E5-4A2D-AACB-273BEDC3F4CD}|src\\Revit.Automation\\Revit.Automation.csproj|d:\\revit\\revittests\\flauitestwithclasslibrarynetstandard\\src\\revit.automation\\dialogs\\dialogmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14A730EA-D0E5-4A2D-AACB-273BEDC3F4CD}|src\\Revit.Automation\\Revit.Automation.csproj|solutionrelative:src\\revit.automation\\dialogs\\dialogmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -27,12 +23,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Revit.UiTests",
+              "Title": "Revit.UiTests.csproj",
               "DocumentMoniker": "D:\\Revit\\RevitTests\\FlaUITestWithClassLibraryNETStandard\\tests\\Revit.UiTests\\Revit.UiTests.csproj",
               "RelativeDocumentMoniker": "tests\\Revit.UiTests\\Revit.UiTests.csproj",
               "ToolTip": "D:\\Revit\\RevitTests\\FlaUITestWithClassLibraryNETStandard\\tests\\Revit.UiTests\\Revit.UiTests.csproj",
               "RelativeToolTip": "tests\\Revit.UiTests\\Revit.UiTests.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-08-14T11:31:46.445Z",
               "EditorCaption": ""
@@ -40,19 +36,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TrialDialog.cs",
-              "DocumentMoniker": "D:\\Revit\\RevitTests\\FlaUITestWithClassLibraryNETStandard\\src\\Revit.Automation\\Dialogs\\TrialDialog.cs",
-              "RelativeDocumentMoniker": "src\\Revit.Automation\\Dialogs\\TrialDialog.cs",
-              "ToolTip": "D:\\Revit\\RevitTests\\FlaUITestWithClassLibraryNETStandard\\src\\Revit.Automation\\Dialogs\\TrialDialog.cs",
-              "RelativeToolTip": "src\\Revit.Automation\\Dialogs\\TrialDialog.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T11:31:30.179Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "DialogManager.cs",
               "DocumentMoniker": "D:\\Revit\\RevitTests\\FlaUITestWithClassLibraryNETStandard\\src\\Revit.Automation\\Dialogs\\DialogManager.cs",
               "RelativeDocumentMoniker": "src\\Revit.Automation\\Dialogs\\DialogManager.cs",
