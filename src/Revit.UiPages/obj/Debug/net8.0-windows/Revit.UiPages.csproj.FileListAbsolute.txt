@@ -1,0 +1,15 @@
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\bin\Debug\net8.0-windows\Revit.UiPages.deps.json
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\bin\Debug\net8.0-windows\Revit.UiPages.dll
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\bin\Debug\net8.0-windows\Revit.UiPages.pdb
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\bin\Debug\net8.0-windows\Revit.Automation.dll
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\bin\Debug\net8.0-windows\Revit.Automation.pdb
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\obj\Debug\net8.0-windows\Revit.UiPages.csproj.AssemblyReference.cache
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\obj\Debug\net8.0-windows\Revit.UiPages.GeneratedMSBuildEditorConfig.editorconfig
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\obj\Debug\net8.0-windows\Revit.UiPages.AssemblyInfoInputs.cache
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\obj\Debug\net8.0-windows\Revit.UiPages.AssemblyInfo.cs
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\obj\Debug\net8.0-windows\Revit.UiPages.csproj.CoreCompileInputs.cache
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\obj\Debug\net8.0-windows\Revit.Ui.4CFA0D4F.Up2Date
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\obj\Debug\net8.0-windows\Revit.UiPages.dll
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\obj\Debug\net8.0-windows\refint\Revit.UiPages.dll
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\obj\Debug\net8.0-windows\Revit.UiPages.pdb
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.UiPages\obj\Debug\net8.0-windows\ref\Revit.UiPages.dll

@@ -1,0 +1,12 @@
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\bin\Debug\net8.0-windows\Revit.Automation.deps.json
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\bin\Debug\net8.0-windows\Revit.Automation.dll
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\bin\Debug\net8.0-windows\Revit.Automation.pdb
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\obj\Debug\net8.0-windows\Revit.Automation.csproj.AssemblyReference.cache
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\obj\Debug\net8.0-windows\Revit.Automation.GeneratedMSBuildEditorConfig.editorconfig
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\obj\Debug\net8.0-windows\Revit.Automation.AssemblyInfoInputs.cache
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\obj\Debug\net8.0-windows\Revit.Automation.AssemblyInfo.cs
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\obj\Debug\net8.0-windows\Revit.Automation.csproj.CoreCompileInputs.cache
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\obj\Debug\net8.0-windows\Revit.Automation.dll
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\obj\Debug\net8.0-windows\refint\Revit.Automation.dll
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\obj\Debug\net8.0-windows\Revit.Automation.pdb
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\obj\Debug\net8.0-windows\ref\Revit.Automation.dll

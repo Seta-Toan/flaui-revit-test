@@ -1,0 +1,6 @@
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net8.0-windows\.msCoverageSourceRootsMapping_Revit.UiTests
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\obj\Debug\net8.0-windows\Revit.UiTests.csproj.AssemblyReference.cache
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\obj\Debug\net8.0-windows\Revit.UiTests.GeneratedMSBuildEditorConfig.editorconfig
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\obj\Debug\net8.0-windows\Revit.UiTests.AssemblyInfoInputs.cache
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\obj\Debug\net8.0-windows\Revit.UiTests.AssemblyInfo.cs
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\obj\Debug\net8.0-windows\Revit.UiTests.csproj.CoreCompileInputs.cache
