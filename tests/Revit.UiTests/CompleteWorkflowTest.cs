@@ -14,7 +14,7 @@ namespace Revit.UiTests;
 [Category("CompleteWorkflow")]
 public class CompleteWorkflowTest
 {
-    [Test]
+    [Test, Order(1)]
     [Timeout(700000)]
     [Retry(1)]
     public void E2E_Revit_Startup_To_Project_Selection()
@@ -46,13 +46,13 @@ public class CompleteWorkflowTest
         TestContext.Progress.WriteLine($"✅ E2E hoàn tất trong {(DateTime.Now - startTime).TotalSeconds:F1}s");
     }
 
-    [Test]
+    [Test, Order(2)]
     [Timeout(120000)] 
     [Retry(1)]
     public void E2E_Open_Sample_Project()
     {
         var startTime = DateTime.Now;
-        TestContext.Progress.WriteLine("🚀 Bắt đầu E2E: Mở Sample Structure Project...");
+        TestContext.Progress.WriteLine("🚀 Bắt đầu E2E: Mở project...");
 
         var revit = GlobalSetup.Revit;
         Assert.That(revit.IsMainWindowReady(), Is.True, "Revit main window chưa sẵn sàng");
@@ -62,13 +62,16 @@ public class CompleteWorkflowTest
         var homePage = new Revit.UiPages.Pages.RevitHomePage(mainWindow, revit.Uia!);
         Assert.That(homePage.IsLoaded(), Is.True, "Home page chưa load xong");
         
-        var sampleProjectOpened = homePage.OpenExistingProject("Sample Structure Project");
-        Assert.That(sampleProjectOpened, Is.True, "Không thể mở Sample Structure Project");
+        var sampleProjectOpened = homePage.OpenFirstAvailableProject();
+        Assert.That(sampleProjectOpened, Is.True, "Không thể mở project");
 
         TestContext.Progress.WriteLine($"✅ E2E Sample Project hoàn tất trong {(DateTime.Now - startTime).TotalSeconds:F1}s");
+
+        var resetSuccessful = homePage.ReturnToProjectSelection();
+        Assert.That(resetSuccessful, Is.True, "Không thể chuyển về trang project selection bằng Ctrl+D");
     }
 
-    [Test]
+    [Test, Order(3)]
     [Timeout(120000)] // 2 phút  
     [Retry(1)]
     public void E2E_Click_New_Project()
@@ -90,9 +93,6 @@ public class CompleteWorkflowTest
         TestContext.Progress.WriteLine($"✅ E2E New Project hoàn tất trong {(DateTime.Now - startTime).TotalSeconds:F1}s");
     }
 
-    /// <summary>
-    /// Kiểm tra xem có đang ở trang project selection không
-    /// </summary>
     private bool IsProjectSelectionVisible(Window mainWindow)
     {
         try

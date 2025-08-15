@@ -384,10 +384,10 @@ dotnet test
 ### **Chạy Test Cụ Thể:**
 ```bash
 # Chạy test theo tên
-dotnet test --filter "Name=E2E_Revit_Startup_To_Project_Selection"
+dotnet test --filter "Name=E2E_Revit_Startup_To_Project_Selection" --logger "console;verbosity=detailed"
 
 # Chạy test theo category
-dotnet test --filter "Category=CompleteWorkflow"
+dotnet test --filter "Category=CompleteWorkflow" --logger "console;verbosity=detailed"
 
 # Chạy test với log chi tiết
 dotnet test --logger "console;verbosity=detailed"

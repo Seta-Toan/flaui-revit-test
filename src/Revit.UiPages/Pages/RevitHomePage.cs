@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Forms;
 using FlaUI.Core;
 using FlaUI.Core.AutomationElements;
 using FlaUI.Core.Definitions;
@@ -49,37 +51,69 @@ public class RevitHomePage
         }
     }
 
-    public bool OpenExistingProject(string projectName)
+    /// <summary>
+    /// Mở project đầu tiên có sẵn (không cần chỉ định tên cụ thể)
+    /// </summary>
+    public bool OpenFirstAvailableProject()
     {
         try
         {
-            TestContext.Progress.WriteLine($"🔍 RevitHomePage: Tìm và mở project '{projectName}'...");
+            TestContext.Progress.WriteLine("🔍 RevitHomePage: Tìm project đầu tiên có sẵn...");
 
-            // Tìm project card theo tên
+            // Tìm tất cả project cards
             var projectFound = UiWaits.Until(() =>
             {
                 var allElements = _mainWindow.FindAllDescendants();
+                var availableProjects = new List<AutomationElement>();
+
                 foreach (var element in allElements)
                 {
                     try
                     {
-                        var name = element.Name ?? "";
-                        if (name.Contains(projectName) && element.IsAvailable)
+                        if (element.IsAvailable)
                         {
-                            TestContext.Progress.WriteLine($"✅ RevitHomePage: Tìm thấy project '{name}'");
-                            element.AsButton()?.Click();
-                            return true;
+                            var name = element.Name ?? "";
+                            var controlType = element.ControlType;
+                            if (IsValidProjectCard(name, controlType))
+                            {
+                                availableProjects.Add(element);
+                                TestContext.Progress.WriteLine($"🔍 RevitHomePage: Tìm thấy project candidate: '{name}' (Type: {controlType})");
+                            }
                         }
                     }
-                    catch { }
+                    catch (Exception ex)
+                    {
+                        TestContext.Progress.WriteLine($"⚠️ RevitHomePage: Lỗi khi xử lý element: {ex.Message}");
+                    }
                 }
+
+                TestContext.Progress.WriteLine($"📊 RevitHomePage: Tìm thấy {availableProjects.Count} project candidates");
+
+                if (availableProjects.Count > 0)
+                {
+                    // Chọn project đầu tiên
+                    var firstProject = availableProjects[0];
+                    var projectName = firstProject.Name ?? "Unknown Project";
+                    
+                    TestContext.Progress.WriteLine($"✅ RevitHomePage: Chọn project đầu tiên: '{projectName}'");
+                    
+                    try
+                    {
+                        firstProject.Click();
+                        TestContext.Progress.WriteLine($"✅ RevitHomePage: Đã click trực tiếp vào project '{projectName}'");
+                        return true;
+                    }
+                    catch (Exception directClickEx)
+                    {
+                        TestContext.Progress.WriteLine($"⚠️ RevitHomePage: Lỗi khi click trực tiếp: {directClickEx.Message}");
+                    }
+                }
+
                 return false;
             }, TimeSpan.FromSeconds(15), TestConfig.PollInterval);
 
             if (projectFound)
             {
-                TestContext.Progress.WriteLine($"✅ RevitHomePage: Đã click vào project '{projectName}'");
-                
                 // Chờ trang project load
                 TestContext.Progress.WriteLine("⏳ RevitHomePage: Chờ 50 giây để trang project load...");
                 System.Threading.Thread.Sleep(50000); 
@@ -88,7 +122,7 @@ public class RevitHomePage
                 return true;
             }
 
-            TestContext.Progress.WriteLine($"❌ RevitHomePage: Không tìm thấy project '{projectName}'");
+            TestContext.Progress.WriteLine("❌ RevitHomePage: Không tìm thấy project nào có sẵn");
             return false;
         }
         catch (Exception ex)
@@ -97,6 +131,96 @@ public class RevitHomePage
             return false;
         }
     }
+
+    /// <summary>
+    /// Kiểm tra xem element có phải là project card hợp lệ không
+    /// </summary>
+    private bool IsValidProjectCard(string name, ControlType controlType)
+    {
+        // Loại bỏ các element không phải project
+        if (string.IsNullOrEmpty(name) || 
+            name.Contains("Autodesk") || 
+            name.Contains("Cloud") ||
+            name.Contains("Recent") ||
+            name.Contains("Sort by") ||
+            name.Contains("Search"))
+        {
+            return false;
+        }
+
+        // Chỉ chấp nhận các control type phù hợp với project cards
+        if (controlType != ControlType.Group && 
+            controlType != ControlType.Custom && 
+            controlType != ControlType.Pane &&
+            controlType != ControlType.ListItem)
+        {
+            return false;
+        }
+
+        // Kiểm tra tên có chứa từ khóa project không
+        var lowerName = name.ToLower();
+        return lowerName.Contains("sample") || 
+               lowerName.Contains("project") || 
+               lowerName.Contains("template") ||
+               lowerName.Contains("architectural") ||
+               lowerName.Contains("structural") ||
+               lowerName.Contains("hvac") ||
+               lowerName.Contains("plumbing") ||
+               lowerName.Contains("electrical") ||
+               lowerName.Contains("family");
+    }
+
+    // /// <summary>
+    // /// Mở project theo tên cụ thể (giữ lại để tương thích ngược)
+    // /// </summary>
+    // public bool OpenExistingProject(string projectName)
+    // {
+    //     try
+    //     {
+    //         TestContext.Progress.WriteLine($"🔍 RevitHomePage: Tìm và mở project '{projectName}'...");
+
+    //         // Tìm project card theo tên
+    //         var projectFound = UiWaits.Until(() =>
+    //         {
+    //             var allElements = _mainWindow.FindAllDescendants();
+    //             foreach (var element in allElements)
+    //             {
+    //                 try
+    //                 {
+    //                     var name = element.Name ?? "";
+    //                     if (name.Contains(projectName) && element.IsAvailable)
+    //                     {
+    //                         TestContext.Progress.WriteLine($"✅ RevitHomePage: Tìm thấy project '{name}'");
+    //                         element.AsButton()?.Click();
+    //                         return true;
+    //                     }
+    //                 }
+    //                 catch { }
+    //             }
+    //             return false;
+    //         }, TimeSpan.FromSeconds(15), TestConfig.PollInterval);
+
+    //         if (projectFound)
+    //         {
+    //             TestContext.Progress.WriteLine($"✅ RevitHomePage: Đã click vào project '{projectName}'");
+                
+    //             // Chờ trang project load
+    //             TestContext.Progress.WriteLine("⏳ RevitHomePage: Chờ 50 giây để trang project load...");
+    //             System.Threading.Thread.Sleep(50000); 
+    //             TestContext.Progress.WriteLine("✅ RevitHomePage: Hoàn tất chờ project load");
+                
+    //             return true;
+    //         }
+
+    //         TestContext.Progress.WriteLine($"❌ RevitHomePage: Không tìm thấy project '{projectName}'");
+    //         return false;
+    //     }
+    //     catch (Exception ex)
+    //     {
+    //         TestContext.Progress.WriteLine($"❌ RevitHomePage: Lỗi khi mở project: {ex.Message}");
+    //         return false;
+    //     }
+    // }
 
     public bool ClickNewProject()
     {
@@ -195,6 +319,166 @@ public class RevitHomePage
         catch (Exception ex)
         {
             TestContext.Progress.WriteLine($"❌ RevitHomePage: Lỗi khi click Open: {ex.Message}");
+            return false;
+        }
+    }
+
+    public bool UseKeyboardShortcut()
+    {
+        try
+        {
+            TestContext.Progress.WriteLine("⌨️ RevitHomePage: Sử dụng tổ hợp phím Ctrl+D...");
+            
+            // Focus vào main window trước
+            _mainWindow.Focus();
+            System.Threading.Thread.Sleep(500); // Chờ focus
+            
+            // Gửi tổ hợp phím Ctrl+D
+            System.Windows.Forms.SendKeys.SendWait("^d");
+            System.Threading.Thread.Sleep(1000); // Chờ xử lý
+            
+            TestContext.Progress.WriteLine("✅ RevitHomePage: Đã gửi tổ hợp phím Ctrl+D");
+            return true;
+        }
+        catch (Exception ex)
+        {
+            TestContext.Progress.WriteLine($"❌ RevitHomePage: Lỗi khi sử dụng tổ hợp phím: {ex.Message}");
+            return false;
+        }
+    }
+
+    public bool ReturnToProjectSelection()
+    {
+        try
+        {
+            TestContext.Progress.WriteLine("🔄 RevitHomePage: Sử dụng Ctrl+D để về trang project selection...");
+            
+            // Sử dụng Ctrl+D
+            var success = UseKeyboardShortcut();
+            
+            if (success)
+            {
+                TestContext.Progress.WriteLine("✅ RevitHomePage: Ctrl+D đã được thực thi thành công");
+                
+                // Chờ và kiểm tra xem đã về trang project selection chưa
+                TestContext.Progress.WriteLine("⏳ RevitHomePage: Chờ chuyển về trang project selection...");
+                var returnedToProjectSelection = UiWaits.Until(() =>
+                {
+                    try
+                    {
+                        return IsProjectSelectionVisible();
+                    }
+                    catch
+                    {
+                        return false;
+                    }
+                }, TimeSpan.FromSeconds(15), TestConfig.PollInterval);
+
+                if (returnedToProjectSelection)
+                {
+                    TestContext.Progress.WriteLine("✅ RevitHomePage: Đã chuyển về trang project selection thành công");
+                    return true;
+                }
+                else
+                {
+                    TestContext.Progress.WriteLine("⚠️ RevitHomePage: Ctrl+D đã thực thi nhưng chưa về trang project selection");
+                    return false;
+                }
+            }
+            
+            return false;
+        }
+        catch (Exception ex)
+        {
+            TestContext.Progress.WriteLine($"❌ RevitHomePage: Lỗi khi sử dụng Ctrl+D: {ex.Message}");
+            return false;
+        }
+    }
+
+    /// <summary>
+    /// Lấy danh sách tất cả projects có sẵn
+    /// </summary>
+    public List<string> GetAvailableProjects()
+    {
+        var availableProjects = new List<string>();
+        
+        try
+        {
+            TestContext.Progress.WriteLine("🔍 RevitHomePage: Quét tất cả projects có sẵn...");
+            
+            var allElements = _mainWindow.FindAllDescendants();
+            
+            foreach (var element in allElements)
+            {
+                try
+                {
+                    if (element.IsAvailable)
+                    {
+                        var name = element.Name ?? "";
+                        var controlType = element.ControlType;
+                        
+                        // Sử dụng logic mới để kiểm tra project card
+                        if (IsValidProjectCard(name, controlType))
+                        {
+                            availableProjects.Add(name);
+                            TestContext.Progress.WriteLine($"🔍 RevitHomePage: Tìm thấy project: '{name}' (Type: {controlType})");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    TestContext.Progress.WriteLine($"⚠️ RevitHomePage: Lỗi khi xử lý element: {ex.Message}");
+                }
+            }
+            
+            TestContext.Progress.WriteLine($"📊 RevitHomePage: Tổng cộng tìm thấy {availableProjects.Count} projects");
+            
+            // Loại bỏ duplicates
+            var uniqueProjects = availableProjects.Distinct().ToList();
+            if (uniqueProjects.Count != availableProjects.Count)
+            {
+                TestContext.Progress.WriteLine($"📊 RevitHomePage: Sau khi loại bỏ duplicates: {uniqueProjects.Count} projects");
+            }
+            
+            return uniqueProjects;
+        }
+        catch (Exception ex)
+        {
+            TestContext.Progress.WriteLine($"❌ RevitHomePage: Lỗi khi quét projects: {ex.Message}");
+            return new List<string>();
+        }
+    }
+
+    /// <summary>
+    /// Kiểm tra xem có đang ở trang project selection không
+    /// </summary>
+    private bool IsProjectSelectionVisible()
+    {
+        try
+        {
+            // Tìm text "Recent" để xác nhận đang ở home page
+            var recentText = _mainWindow.FindFirstDescendant(cf => 
+                cf.ByControlType(ControlType.Text).And(cf.ByName("Recent")));
+            
+            if (recentText != null && recentText.IsAvailable)
+            {
+                return true;
+            }
+            
+            // Backup: tìm "Revit 2026" text
+            var revitText = _mainWindow.FindFirstDescendant(cf => 
+                cf.ByControlType(ControlType.Text).And(cf.ByName("Revit 2026")));
+                
+            if (revitText != null && revitText.IsAvailable)
+            {
+                return true;
+            }
+            
+            return false;
+        }
+        catch (Exception ex)
+        {
+            TestContext.Progress.WriteLine($"⚠️ Lỗi khi kiểm tra project selection: {ex.Message}");
             return false;
         }
     }
