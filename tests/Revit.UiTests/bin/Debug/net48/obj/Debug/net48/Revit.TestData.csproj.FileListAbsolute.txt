@@ -1,0 +1,10 @@
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.TestData\bin\Debug\net48\Revit.TestData.dll
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.TestData\bin\Debug\net48\Revit.TestData.pdb
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.TestData\obj\Debug\net48\Revit.TestData.csproj.AssemblyReference.cache
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.TestData\obj\Debug\net48\Revit.TestData.GeneratedMSBuildEditorConfig.editorconfig
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.TestData\obj\Debug\net48\Revit.TestData.AssemblyInfoInputs.cache
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.TestData\obj\Debug\net48\Revit.TestData.AssemblyInfo.cs
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.TestData\obj\Debug\net48\Revit.TestData.csproj.CoreCompileInputs.cache
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.TestData\obj\Debug\net48\Revit.TestData.sourcelink.json
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.TestData\obj\Debug\net48\Revit.TestData.dll
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.TestData\obj\Debug\net48\Revit.TestData.pdb

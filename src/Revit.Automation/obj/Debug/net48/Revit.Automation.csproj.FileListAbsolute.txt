@@ -13,6 +13,8 @@ D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\bi
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\bin\Debug\net48\Microsoft.Extensions.FileProviders.Physical.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\bin\Debug\net48\Microsoft.Extensions.FileSystemGlobbing.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\bin\Debug\net48\Microsoft.Extensions.Primitives.dll
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\bin\Debug\net48\nunit.framework.dll
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\bin\Debug\net48\nunit.framework.legacy.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\bin\Debug\net48\System.Buffers.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\bin\Debug\net48\System.CodeDom.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\bin\Debug\net48\System.IO.Pipelines.dll
@@ -32,5 +34,3 @@ D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\ob
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\obj\Debug\net48\Revit.Au.085A6968.Up2Date
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\obj\Debug\net48\Revit.Automation.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\obj\Debug\net48\Revit.Automation.pdb
-D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\bin\Debug\net48\nunit.framework.dll
-D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\bin\Debug\net48\nunit.framework.legacy.dll

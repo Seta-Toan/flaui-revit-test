@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Revit.UiPages")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ede1accd34c36bd5fa9725d8aa5b9ab14e142d7d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15182ef807f69bf766a40269ed0deecce7b58e7d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Revit.UiPages")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Revit.UiPages")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
