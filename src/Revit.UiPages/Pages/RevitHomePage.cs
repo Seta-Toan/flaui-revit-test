@@ -213,20 +213,15 @@ public class RevitHomePage
                 return false;
             }
 
+            // 3. Chờ rời khỏi trang Home - SỬA LOGIC NÀY
             TestContext.Progress.WriteLine("⏳ RevitHomePage: Chờ rời khỏi trang Home...");
-            var leftHomePage = UiWaits.Until(() =>
-            {
-                try
-                {
-                    return !IsLoaded();
-                }
-                catch
-                {
-                    return false;
-                }
-            }, TimeSpan.FromSeconds(30), TestConfig.PollInterval);
-
-            if (leftHomePage)
+            
+            // Chờ một chút để project load
+            System.Threading.Thread.Sleep(5000);
+            
+            // Kiểm tra đơn giản: nếu không còn ở home thì OK
+            var isStillHome = IsLoaded();
+            if (!isStillHome)
             {
                 TestContext.Progress.WriteLine("✅ RevitHomePage: Đã rời khỏi trang Home, project mới đang được tạo");
                 return true;
