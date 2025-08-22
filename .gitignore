@@ -1,0 +1,145 @@
+# ========================================
+# .NET Build Outputs
+# ========================================
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.tmp
+*.log
+*.tlog
+*.lastbuildstate
+*.unsuccessfulbuild
+*.BuildWithSkipAnalyzers
+*.Up2Date
+*.genautoregisteredextensionsinputcache.cache
+*.gentestingplatformentrypointinputcache.cache
+*.csproj.AssemblyReference.cache
+*.csproj.CoreCompileInputs.cache
+*.csproj.FileListAbsolute.txt
+*.csproj.SuggestedBindingRedirects.cache
+*.csproj.BuildWithSkipAnalyzers
+*.assets.cache
+*.sourcelink.json
+*.AssemblyInfo.cs
+*.AssemblyInfoInputs.cache
+*.GlobalUsings.g.cs
+*.GeneratedMSBuildEditorConfig.editorconfig
+*.NETFramework,Version=v4.8.AssemblyAttributes.cs
+
+# ========================================
+# NuGet Package Management
+# ========================================
+*.nuget.dgspec.json
+*.nuget.g.props
+*.nuget.g.targets
+project.assets.json
+project.nuget.cache
+project.nuget.cache.bak
+packages/
+*.nupkg
+
+# ========================================
+# Visual Studio Files
+# ========================================
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.futdcache.v2
+DocumentLayout.json
+DocumentLayout.backup.json
+*.vsidx
+*.dtbcache.v2
+CodeChunks.db
+SemanticSymbols.db
+TestStore/
+
+# ========================================
+# Test Results and Coverage
+# ========================================
+TestResults/
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+*.coverage
+*.coveragexml
+*.htm
+*.html
+*.xml
+nunit_random_seed.tmp
+*.testresults
+*.testlog
+
+# ========================================
+# Environment and Configuration Files
+# ========================================
+appsettings.*.json
+appsettings.json
+*.config
+*.env
+*.env.local
+*.env.development
+*.env.test
+*.env.production
+web.config
+app.config
+connectionstrings.config
+*.settings
+*.user.config
+
+# ========================================
+# IDE and Editor Files
+# ========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ========================================
+# Temporary and Cache Files
+# ========================================
+*.tmp
+*.temp
+*.cache
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*.log
+*.out
+*.pid
+*.seed
+*.pid.lock
+
+# ========================================
+# Build Artifacts
+# ========================================
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# ========================================
+# Revit Specific Files
+# ========================================
+*.rvt
+*.rfa
+*.rte
+*.rft

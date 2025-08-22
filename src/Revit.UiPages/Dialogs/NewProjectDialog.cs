@@ -52,12 +52,19 @@ public class NewProjectDialog
             }
 
             TestContext.Progress.WriteLine("⏳ NewProjectDialog: Chờ project load hoàn toàn...");
-            System.Threading.Thread.Sleep(10000);
+            System.Threading.Thread.Sleep(15000);
+
+            TestContext.Progress.WriteLine("💾 NewProjectDialog: Focus vào Revit window...");
+            var revitWindow = FindRevitWindow();
+            if (revitWindow != null)
+            {
+                revitWindow.Focus();
+                System.Threading.Thread.Sleep(2000);
+            }
 
             TestContext.Progress.WriteLine("💾 NewProjectDialog: Sử dụng SaveAsDialog để lưu project...");
-            var revitWindow = FindRevitWindow();
             var saveAsDialog = new SaveAsDialog(_automation, revitWindow!);
-            var projectSaved = saveAsDialog.SaveProjectToTestData(projectName);
+            var projectSaved = saveAsDialog.SaveProject(projectName);
             
             if (!projectSaved)
             {
@@ -173,35 +180,6 @@ public class NewProjectDialog
         catch (Exception ex)
         {
             TestContext.Progress.WriteLine($"❌ NewProjectDialog: Lỗi khi click OK: {ex.Message}");
-            return false;
-        }
-    }
-
-    /// <summary>
-    /// Lưu project bằng Ctrl+S
-    /// </summary>
-    private bool SaveProjectWithCtrlS()
-    {
-        try
-        {
-            var revitWindow = _automation.GetDesktop().FindFirstChild(cf => 
-                cf.ByControlType(ControlType.Window).And(cf.ByName("Autodesk Revit 2026.2 - UNREGISTERED VERSION - [Home]")));
-            
-            if (revitWindow != null)
-            {
-                revitWindow.Focus();
-                System.Threading.Thread.Sleep(500);
-            }
-            
-            System.Windows.Forms.SendKeys.SendWait("^s");
-            System.Threading.Thread.Sleep(2000);
-            
-            TestContext.Progress.WriteLine("✅ NewProjectDialog: Đã gửi Ctrl+S");
-            return true;
-        }
-        catch (Exception ex)
-        {
-            TestContext.Progress.WriteLine($"⚠️ NewProjectDialog: Lỗi khi lưu project: {ex.Message}");
             return false;
         }
     }

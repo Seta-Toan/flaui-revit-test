@@ -24,6 +24,7 @@ public abstract class TestBase
         // Hủy đăng ký test
         GlobalSetup.UnregisterTest(TestId);
         TestContext.Progress.WriteLine($"✅ Test {TestId} hoàn thành: {TestContext.CurrentContext.Test.Name}");
+        GlobalSetup.KillAllRevitProcesses();
     }
 
     /// <summary>

@@ -3,14 +3,9 @@ using System;
 using System.Threading;
 using System.Collections.Concurrent;
 using Revit.Automation.Core.Drivers;
-using FlaUI.Core;
-using FlaUI.Core.AutomationElements;
-using FlaUI.Core.Definitions;
-using FlaUI.UIA3;
-using Revit.Automation.Core.Config;
-using Revit.Automation.Core.Utils;
 using System.Linq;
 using Revit.UiPages.Dialogs;
+using System.Diagnostics;
 
 [assembly: Apartment(ApartmentState.STA)]
 
@@ -81,6 +76,8 @@ public sealed class GlobalSetup
                 _revit.Dispose();
                 _revit = null;
             }
+            
+            KillAllRevitProcesses();
         }
         catch (Exception ex)
         {
@@ -101,4 +98,25 @@ public sealed class GlobalSetup
     }
 
     public static bool HasActiveTests => !_activeTests.IsEmpty;
+
+    /// <summary>
+    /// Kill tất cả Revit processes
+    /// </summary>
+    public static void KillAllRevitProcesses()
+    {
+        try
+        {
+            var revitProcesses = Process.GetProcessesByName("Revit");
+            foreach (var process in revitProcesses)
+            {
+                TestContext.Progress.WriteLine($"🔒 GlobalSetup: Kill Revit process PID {process.Id}");
+                process.Kill();
+            }
+            TestContext.Progress.WriteLine("✅ GlobalSetup: Đã kill tất cả Revit processes");
+        }
+        catch (Exception ex)
+        {
+            TestContext.Progress.WriteLine($"⚠️ GlobalSetup: Lỗi khi kill Revit processes: {ex.Message}");
+        }
+    }
 }

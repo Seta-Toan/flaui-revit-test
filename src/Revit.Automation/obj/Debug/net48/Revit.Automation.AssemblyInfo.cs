@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Revit.Automation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1230c31c048c430587a6759e4a53232e04fc0c35")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c738730313addbf41fd76e91227056eac1dbd09")]
 [assembly: System.Reflection.AssemblyProductAttribute("Revit.Automation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Revit.Automation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

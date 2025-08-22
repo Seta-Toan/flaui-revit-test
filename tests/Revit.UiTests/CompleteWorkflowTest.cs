@@ -27,7 +27,6 @@ public class CompleteWorkflowTest
 
         var homePage = new RevitHomePage(mainWindow, revit.Uia!);
         
-        // Kiểm tra xem có đang ở trang project selection hoặc home page không
         var onProjectSelection = homePage.IsLoaded();
         Assert.That(onProjectSelection, Is.True, "Home page chưa load xong");
 

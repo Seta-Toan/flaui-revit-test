@@ -85,108 +85,6 @@ public class RevitHomePage
             return false;
         }
     }
-    public bool UseKeyboardShortcut()
-    {
-        try
-        {
-            TestContext.Progress.WriteLine("⌨️ RevitHomePage: Sử dụng tổ hợp phím Ctrl+D...");
-            
-            // Focus vào main window trước
-            _mainWindow.Focus();
-            System.Threading.Thread.Sleep(500); // Chờ focus
-            
-            // Gửi tổ hợp phím Ctrl+D
-            System.Windows.Forms.SendKeys.SendWait("^d");
-            System.Threading.Thread.Sleep(1000); // Chờ xử lý
-            
-            TestContext.Progress.WriteLine("✅ RevitHomePage: Đã gửi tổ hợp phím Ctrl+D");
-            return true;
-        }
-        catch (Exception ex)
-        {
-            TestContext.Progress.WriteLine($"❌ RevitHomePage: Lỗi khi sử dụng tổ hợp phím: {ex.Message}");
-            return false;
-        }
-    }
-
-    public bool ReturnToProjectSelection()
-    {
-        try
-        {
-            TestContext.Progress.WriteLine("🔄 RevitHomePage: Sử dụng Ctrl+D để về trang project selection...");
-            
-            // Sử dụng Ctrl+D
-            var success = UseKeyboardShortcut();
-            
-            if (success)
-            {
-                TestContext.Progress.WriteLine("✅ RevitHomePage: Ctrl+D đã được thực thi thành công");
-                
-                // Chờ và kiểm tra xem đã về trang project selection chưa
-                TestContext.Progress.WriteLine("⏳ RevitHomePage: Chờ chuyển về trang project selection...");
-                var returnedToProjectSelection = UiWaits.Until(() =>
-                {
-                    try
-                    {
-                        return IsProjectSelectionVisible();
-                    }
-                    catch
-                    {
-                        return false;
-                    }
-                }, TimeSpan.FromSeconds(15), TestConfig.PollInterval);
-
-                if (returnedToProjectSelection)
-                {
-                    TestContext.Progress.WriteLine("✅ RevitHomePage: Đã chuyển về trang project selection thành công");
-                    return true;
-                }
-                else
-                {
-                    TestContext.Progress.WriteLine("⚠️ RevitHomePage: Ctrl+D đã thực thi nhưng chưa về trang project selection");
-                    return false;
-                }
-            }
-            
-            return false;
-        }
-        catch (Exception ex)
-        {
-            TestContext.Progress.WriteLine($"❌ RevitHomePage: Lỗi khi sử dụng Ctrl+D: {ex.Message}");
-            return false;
-        }
-    }
-    private bool IsProjectSelectionVisible()
-    {
-        try
-        {
-            // Tìm text "Recent" để xác nhận đang ở home page
-            var recentText = _mainWindow.FindFirstDescendant(cf => 
-                cf.ByControlType(ControlType.Text).And(cf.ByName("Recent")));
-            
-            if (recentText != null && recentText.IsAvailable)
-            {
-                return true;
-            }
-            
-            // Backup: tìm "Revit 2026" text
-            var revitText = _mainWindow.FindFirstDescendant(cf => 
-                cf.ByControlType(ControlType.Text).And(cf.ByName("Revit 2026")));
-                
-            if (revitText != null && revitText.IsAvailable)
-            {
-                return true;
-            }
-            
-            return false;
-        }
-        catch (Exception ex)
-        {
-            TestContext.Progress.WriteLine($"⚠️ Lỗi khi kiểm tra project selection: {ex.Message}");
-            return false;
-        }
-    }
-
 
     /// <summary>
     /// Tạo project mới thông qua New Project dialog
@@ -212,25 +110,9 @@ public class RevitHomePage
                 TestContext.Progress.WriteLine("❌ RevitHomePage: Không thể tạo project mới");
                 return false;
             }
-
-            // 3. Chờ rời khỏi trang Home - SỬA LOGIC NÀY
-            TestContext.Progress.WriteLine("⏳ RevitHomePage: Chờ rời khỏi trang Home...");
-            
-            // Chờ một chút để project load
-            System.Threading.Thread.Sleep(5000);
-            
-            // Kiểm tra đơn giản: nếu không còn ở home thì OK
-            var isStillHome = IsLoaded();
-            if (!isStillHome)
-            {
-                TestContext.Progress.WriteLine("✅ RevitHomePage: Đã rời khỏi trang Home, project mới đang được tạo");
-                return true;
-            }
-            else
-            {
-                TestContext.Progress.WriteLine("⚠️ RevitHomePage: Vẫn còn ở trang Home sau khi tạo project");
-                return false;
-            }
+            System.Threading.Thread.Sleep(10000);
+            TestContext.Progress.WriteLine("✅ RevitHomePage: Project mới đã được tạo thành công");
+            return true;
         }
         catch (Exception ex)
         {

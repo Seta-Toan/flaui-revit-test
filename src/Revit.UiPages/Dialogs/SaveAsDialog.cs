@@ -25,11 +25,11 @@ public class SaveAsDialog
     /// <summary>
     /// Xử lý Save As dialog để lưu project
     /// </summary>
-    public bool SaveProjectToTestData(string projectName = "TestProject")
+    public bool SaveProject(string projectName = "TestProject")
     {
         try
         {
-            TestContext.Progress.WriteLine("💾 SaveAsDialog: Bắt đầu lưu project vào test data...");
+            TestContext.Progress.WriteLine("💾 SaveAsDialog: Bắt đầu lưu project");
 
             System.Threading.Thread.Sleep(5000);
             var saveAsTriggered = TriggerSaveAs();
@@ -69,11 +69,7 @@ public class SaveAsDialog
                 return false;
             }
 
-            TestContext.Progress.WriteLine("🏠 SaveAsDialog: Trở về home bằng Ctrl+D...");
-            System.Windows.Forms.SendKeys.SendWait("^d");
-            System.Threading.Thread.Sleep(2000);
-
-            TestContext.Progress.WriteLine("✅ SaveAsDialog: Project đã được lưu thành công và đã về home");
+            TestContext.Progress.WriteLine("✅ SaveAsDialog: Project đã được lưu thành công");
             return true;
         }
         catch (Exception ex)
