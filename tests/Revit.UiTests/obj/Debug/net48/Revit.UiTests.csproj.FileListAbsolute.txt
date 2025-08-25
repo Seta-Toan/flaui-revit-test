@@ -174,3 +174,5 @@ D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\obj\Debug\net48\Revit.TestData.GeneratedMSBuildEditorConfig.editorconfig
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\obj\Debug\net48\Revit.TestData.pdb
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\obj\Debug\net48\Revit.TestData.sourcelink.json
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\DotNetEnv.dll
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\tests\Revit.UiTests\bin\Debug\net48\Sprache.dll

@@ -34,3 +34,5 @@ D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\ob
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\obj\Debug\net48\Revit.Au.085A6968.Up2Date
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\obj\Debug\net48\Revit.Automation.dll
 D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\obj\Debug\net48\Revit.Automation.pdb
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\bin\Debug\net48\DotNetEnv.dll
+D:\Revit\RevitTests\FlaUITestWithClassLibraryNETStandard\src\Revit.Automation\bin\Debug\net48\Sprache.dll
